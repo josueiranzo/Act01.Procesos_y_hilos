@@ -37,8 +37,16 @@ public class cFilPrincipal {
 
 		}
 
-		System.out.println("Acabant execució procès principal");
-
+		boolean vJoined = false;
+		while (!vJoined) {
+			try {
+				vFil.join();
+				vJoined = true;
+				System.out.println("Hilo secundario terminado, ahora termina el principal");
+			} catch (InterruptedException pExcepcio2) {
+				System.out.println("Interrompent espera del hilo secundario, reintentando...");
+			}
+		}
 	}
 
 }
