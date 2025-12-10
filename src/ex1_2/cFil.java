@@ -3,54 +3,54 @@ package ex1_2;
 //alternativa: extends Thread
 public class cFil implements Runnable {
 
-  String aNomFil;
+	String aNomFil;
 
-  int aTemporitzacio;
+	int aTemporitzacio;
 
-  public cFil (String pNomFil) {
+	public cFil(String pNomFil) {
 
-    aTemporitzacio = 500;
+		aTemporitzacio = 500;
 
-    aNomFil = pNomFil;
+		aNomFil = pNomFil;
 
-  }
+	}
 
-  public String gNomFil () {
+	public String gNomFil() {
 
-    return aNomFil;
+		return aNomFil;
 
-  }
+	}
 
-  public void sTemporitzacio (int pTemporitzacio) {
+	public void sTemporitzacio(int pTemporitzacio) {
 
-    aTemporitzacio = pTemporitzacio;
+		aTemporitzacio = pTemporitzacio;
 
-  }
+	}
 
-  public void run () {
+	public void run() {
 
-    System . out . println ("Iniciant execució procés " + aNomFil);
+		System.out.println("Iniciant execució procés " + aNomFil);
 
-    try {
+		try {
 
-      for (int vComptador = 0; vComptador < 10; vComptador ++) {
+			for (int vComptador = 0; vComptador < 10; vComptador++) {
 
-        Thread . sleep (aTemporitzacio);
+				Thread.sleep(aTemporitzacio);
 
-        System . out . println ("Despertant aturada " + vComptador + " procès " + aNomFil);
+				System.out.println("Despertant aturada " + vComptador + " procès " + aNomFil);
 
-      }
+			}
 
-    }
+		}
 
-    catch (InterruptedException pExcepcio) {
+		catch (InterruptedException pExcepcio) {
 
-      System . out . println ("Interrompent execució procès " + aNomFil);
+			System.out.println("Interrompent execució procès " + aNomFil);
 
-    }
+		}
 
-    System . out . println ("Acabant execució procès " + aNomFil);
+		System.out.println("Acabant execució procès " + aNomFil);
 
-  }
+	}
 
 }
