@@ -2,43 +2,43 @@ package ex1_1;
 
 public class cFilPrincipal {
 
-  public static void main (String [] pArguments) {
+	public static void main(String[] pArguments) {
 
-    System . out . println ("Fil principal iniciat.");
-    System . out . println ("Fil secundari iniciat.");
+		System.out.println("Fil principal iniciat.");
+		System.out.println("Fil secundari iniciat.");
 
-    cFil vObjecteFil = new cFil ("#1");
-    
-    vObjecteFil . sTemporitzacio (100);
+		cFil vObjecteFil = new cFil("#1");
 
-    //alternativa: innecessari
-    Thread vFil = new Thread (vObjecteFil);
+		vObjecteFil.sTemporitzacio(100);
 
-    //alternativa: vObjecteFil
-    vFil . start ();
+		// alternativa: innecessari
+		Thread vFil = new Thread(vObjecteFil);
 
-    System . out . println ("Iniciant execució procés principal");
+		// alternativa: vObjecteFil
+		vFil.start();
 
-    try {
+		System.out.println("Iniciant execució procés principal");
 
-      for (int vComptador = 0; vComptador < 10; vComptador ++) {
+		try {
 
-        Thread . sleep (500);
+			for (int vComptador = 0; vComptador < 10; vComptador++) {
 
-        System . out . println ("Despertant aturada " + vComptador + " procès principal");
+				Thread.sleep(500);
 
-      }
+				System.out.println("Despertant aturada " + vComptador + " procès principal");
 
-    }
+			}
 
-    catch (InterruptedException pExcepcio) {
+		}
 
-      System . out . println ("Interrompent execució procès principal");
+		catch (InterruptedException pExcepcio) {
 
-    }
+			System.out.println("Interrompent execució procès principal");
 
-    System . out . println ("Acabant execució procès principal");
+		}
 
-  }
+		System.out.println("Acabant execució procès principal");
+
+	}
 
 }
