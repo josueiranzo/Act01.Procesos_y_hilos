@@ -10,6 +10,8 @@ public class cFilPrincipal {
     System . out . println ("Fil secundari iniciat.");
 
     cFil vObjecteFil = new cFil ("#1");
+    
+    vObjecteFil . sTemporitzacio (100);
 
     //alternativa: innecessari
     Thread vFil = new Thread (vObjecteFil);
