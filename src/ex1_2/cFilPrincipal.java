@@ -1,6 +1,4 @@
-package cFilPrincipal;
-
-import cFil . cFil;
+package ex1_2;
 
 public class cFilPrincipal {
 
@@ -11,7 +9,7 @@ public class cFilPrincipal {
 
     cFil vObjecteFil = new cFil ("#1");
     
-    vObjecteFil . sTemporitzacio (100);
+    vObjecteFil . sTemporitzacio (1000);
 
     //alternativa: innecessari
     Thread vFil = new Thread (vObjecteFil);
@@ -25,7 +23,7 @@ public class cFilPrincipal {
 
       for (int vComptador = 0; vComptador < 10; vComptador ++) {
 
-        Thread . sleep (500);
+        Thread . sleep (300);
 
         System . out . println ("Despertant aturada " + vComptador + " procès principal");
 

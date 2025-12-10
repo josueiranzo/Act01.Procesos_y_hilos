@@ -1,4 +1,4 @@
-package cFil;
+package ex1_2;
 
 //alternativa: extends Thread
 public class cFil implements Runnable {
